@@ -50,7 +50,7 @@ The solution was implemented in the Arrat=y Practikum and gere is a screenshot o
 
 The solution was implemented in the Function Practicum and here is a screenshot of the result.
 
-(Screenshot/ss5.jpg)
+![Screenshot](Screenshot/ss5.jpg)
 
 **Brief explanation:** There are 4 main steps:
 

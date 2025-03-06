@@ -107,4 +107,4 @@
 
 ### Output
 
-![img](img\ss9.jpg)
+- ![img](img/ss9.jpg)

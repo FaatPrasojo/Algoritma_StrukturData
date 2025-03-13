@@ -15,18 +15,26 @@
 
 ### 5.2.3. Pertanyaan
 
-1. - if : Menangani kondisi dasar (basis) dari rekursi, yang menghentikan pemanggilan lebih lanjut dan memberikan nilai dasar untuk faktorial.
-   - else: Menangani kasus rekursif, di mana fungsi memanggil dirinya sendiri untuk menghitung faktorial dari nilai yang lebih kecil.
+1.  - if : Menangani kondisi dasar (basis) dari rekursi, yang menghentikan pemanggilan lebih lanjut dan memberikan nilai dasar untuk faktorial.
+    - else: Menangani kasus rekursif, di mana fungsi memanggil dirinya sendiri untuk menghitung faktorial dari nilai yang lebih kecil.
 
-2. Ya, memungkinkan untuk mengubah metode perulangan dalam fungsi **faktorialBF()** dari menggunakan for menjadi menggunakan metode lain, seperti **while** atau **do-while**\
+2.  Ya, memungkinkan untuk mengubah metode perulangan dalam fungsi **faktorialBF()** dari menggunakan for menjadi menggunakan metode lain, seperti **while** atau **do-while**\
 
-   > Source Code **do-while** :
-   > ![img](img\ss2.jpg)
+    > Source Code **do-while** :\
+    > int faktorialBF(int n) {\
+    >  int fakto = 1;\
+    >  int i = 1;\
+    >  do {\
+    >  fakto = fakto \* i;
+    > i++\
+    > } while (i <= n);\
+    >  return fakto;\
+    > }
 
-3. - **fakto** \***_= i;_** biasanya digunakan dalam loop untuk menghitung produk secara bertahap.
-   - **int fakto = n \* faktorialDC(n-1);** digunakan dalam fungsi rekursif untuk menghitung faktorial dengan memecah masalah menjadi sub-masalah yang lebih kecil.
+3.  - **fakto** \***_= i;_** biasanya digunakan dalam loop untuk menghitung produk secara bertahap.
+    - **int fakto = n \* faktorialDC(n-1);** digunakan dalam fungsi rekursif untuk menghitung faktorial dengan memecah masalah menjadi sub-masalah yang lebih kecil.
 
-4. **faktorialBF()** dan **faktorialDC()** adalah dua pendekatan yang valid untuk menghitung faktorial, masing-masing dengan kelebihan dan kekurangan. Pilihan antara keduanya tergantung pada konteks penggunaan seperti ukuran input dan kebutuhan memori. Pendekatan iteratif lebih cocok untuk aplikasi yang memerlukan efisiensi, sementara pendekatan rekursif lebih cocok untuk situasi di mana kejelasan dan kesederhanaan kode lebih diutamakan
+4.  **faktorialBF()** dan **faktorialDC()** adalah dua pendekatan yang valid untuk menghitung faktorial, masing-masing dengan kelebihan dan kekurangan. Pilihan antara keduanya tergantung pada konteks penggunaan seperti ukuran input dan kebutuhan memori. Pendekatan iteratif lebih cocok untuk aplikasi yang memerlukan efisiensi, sementara pendekatan rekursif lebih cocok untuk situasi di mana kejelasan dan kesederhanaan kode lebih diutamakan
 
 ## 5.3 Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divine Conquer
 

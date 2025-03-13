@@ -20,7 +20,9 @@
 
 2. Ya, memungkinkan untuk mengubah metode perulangan dalam fungsi **faktorialBF()** dari menggunakan for menjadi menggunakan metode lain, seperti **while** atau **do-while**\
 
-   > Source Code **do-while** : ![img](img\ss2.jpg)
+   > Source Code **do-while** :
+
+   - ![img](img\ss2.jpg)
 
 3. - **fakto** \***_= i;_** biasanya digunakan dalam loop untuk menghitung produk secara bertahap.
    - **int fakto = n \* faktorialDC(n-1);** digunakan dalam fungsi rekursif untuk menghitung faktorial dengan memecah masalah menjadi sub-masalah yang lebih kecil.

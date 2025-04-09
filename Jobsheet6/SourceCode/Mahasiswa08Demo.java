@@ -18,9 +18,8 @@ public class Mahasiswa08Demo {
             double ipk = sc.nextDouble();
             sc.nextLine(); 
 
-            Mahasiswa08 m = new Mahasiswa08(nim, nama, kelas, ipk);
-            list.tambah(m);
-            
+            list.tambah(new Mahasiswa08(nim, nama, kelas, ipk));
+        }
             // MahasiswaBerprestasi list = new MahasiswaBerprestasi();
     
             // Mahasiswa08 m1 = new Mahasiswa08("123", "Zidan", "2A", 3.2);
@@ -52,6 +51,6 @@ public class Mahasiswa08Demo {
             list.tampil();
     
             sc.close();
-        }
+
     }
 }

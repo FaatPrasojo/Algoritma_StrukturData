@@ -74,6 +74,7 @@ Tujuan dari perintah `data[j+1] = data[j]` pada Insertoin sort adalah perintah y
 ### 5.3.3 Verifikasi Hasil Percobaan
 
 ![img](img/img4.jpg)
+
 ![img](img/img5.jpg)
 
 ### 5.3.4 Pertanyaan
@@ -126,6 +127,7 @@ KODE PROGRAM Modifikasi
 ### 5.3.6 Verifikasi Hasil Percobaan
 
 `Selection Sort`
+
 ![img](img/img6.jpg)
 
 ### 5.3.7 Pertanyaan
@@ -149,6 +151,7 @@ Program ini bertujuan untuk menemukan indeks dari elemen terkecil dalam bagian y
 ### 5.4.2 Verifikasi Hasil Percobaan
 
 `Insertion Sort`
+
 ![img](img/img7.jpg)
 
 ### 5.4.3 Pertanyaan
@@ -176,8 +179,13 @@ Perubahan terjadi pada kode program `lisMhs[j-1].ipk < temp.ipk` yang sebelumnya
 ## 5.5 Latihan Praktikum
 
 ![img](img/img8.jpg)
+
 ![img](img/img9.jpg)
+
 ![img](img/img10.jpg)
+
 ![img](img/img11.jpg)
+
 ![img](img/img12.jpg)
+
 ![img](img/img13.jpg)

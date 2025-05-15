@@ -1,4 +1,4 @@
-package Jobsheet10.SourceCode;
+package Jobsheet10.Praktikum_SourceCode;
 import java.util.Scanner;
 public class QueueMain {
     public static void menu(){
@@ -38,6 +38,14 @@ public class QueueMain {
 
                 case 3:
                     Q.print();
+                    break;
+
+                case 4:
+                    Q.peek();
+                    break;
+
+                case 5:
+                    Q.clear();
                     break;
 
                 default:

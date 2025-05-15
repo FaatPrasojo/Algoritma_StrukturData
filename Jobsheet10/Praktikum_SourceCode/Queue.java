@@ -1,4 +1,4 @@
-package Jobsheet10.SourceCode;
+package Jobsheet10.Praktikum_SourceCode;
 
 public class Queue {
     int[] data;
@@ -8,7 +8,7 @@ public class Queue {
     int max;
 
     public Queue(int n) {
-        max =n;
+        max = n;
         data = new int[max];
         size = 0;
         front = rear = -1;
@@ -31,7 +31,7 @@ public class Queue {
     }
 
     public void peek() {
-        if(!IsEmpty()) {
+        if (!IsEmpty()) {
             System.out.println("Elemen terdepan : " + data[front]);
         } else {
             System.out.println("Queue masih kosong");
@@ -40,12 +40,12 @@ public class Queue {
 
     public void print() {
         if (IsEmpty()) {
-            System.out.println("Queue masih kosong"); 
+            System.out.println("Queue masih kosong");
         } else {
             int i = front;
             while (i != rear) {
                 System.out.println(data[i] + " ");
-                i = (i+1) % max;
+                i = (i + 1) % max;
             }
             System.out.println(data[i] + " ");
             System.out.println("Jumlah elemen = " + size);
@@ -62,7 +62,7 @@ public class Queue {
         }
     }
 
-    public void Enqueue (int dt) {
+    public void Enqueue(int dt) {
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
         } else {
@@ -86,7 +86,7 @@ public class Queue {
             if (IsEmpty()) {
                 front = rear = -1;
             } else {
-                if (front == max -1) {
+                if (front == max - 1) {
                     front = 0;
                 } else {
                     front++;

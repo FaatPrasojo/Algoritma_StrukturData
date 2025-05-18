@@ -1,7 +1,7 @@
 package Jobsheet10.Praktikum_SourceCode;
 
 public class AntrianLayanan {
-    
+
     Mahasiswa[] data;
     int front;
     int rear;
@@ -12,7 +12,7 @@ public class AntrianLayanan {
         this.max = max;
         this.data = new Mahasiswa[max];
         this.front = 0;
-        this.rear =-1;
+        this.rear = -1;
         this.size = 0;
     }
 
@@ -33,7 +33,7 @@ public class AntrianLayanan {
     }
 
     public void peek() {
-        if(!IsEmpty()) {
+        if (!IsEmpty()) {
             System.out.println("Elemen terdepan : " + data[front]);
         } else {
             System.out.println("Queue masih kosong");
@@ -42,12 +42,12 @@ public class AntrianLayanan {
 
     public void print() {
         if (IsEmpty()) {
-            System.out.println("Queue masih kosong"); 
+            System.out.println("Queue masih kosong");
         } else {
             int i = front;
             while (i != rear) {
                 System.out.println(data[i] + " ");
-                i = (i+1) % max;
+                i = (i + 1) % max;
             }
             System.out.println(data[i] + " ");
             System.out.println("Jumlah elemen = " + size);
@@ -64,10 +64,10 @@ public class AntrianLayanan {
         }
     }
 
-    public void tambahAntrean (Mahasiswa mhs) {
+    public void tambahAntrean(Mahasiswa mhs) {
         if (IsFull()) {
             System.out.println("Antrean penuh, tidak dapat menambah mahasiswa.");
-        } 
+        }
         rear = (rear + 1) % max;
         data[rear] = mhs;
         size++;
@@ -86,7 +86,7 @@ public class AntrianLayanan {
     }
 
     public void lihatTerdepan() {
-        if(IsEmpty()) {
+        if (IsEmpty()) {
             System.out.println("Antrean kosong.");
         } else {
             System.out.print("Mahasiswa terdepan : ");
@@ -111,5 +111,16 @@ public class AntrianLayanan {
 
     public int getJumlahAntrean() {
         return size;
+    }
+
+    //Modifikasi Pertanyaan
+    public void lihatAkhir() {
+        if (IsEmpty()) {
+            System.out.println("Antrean kosong.");
+        } else {
+            System.out.print("Mahasiswa paling belakang : ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData();
+        }
     }
 }

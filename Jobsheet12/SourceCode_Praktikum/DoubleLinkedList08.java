@@ -66,17 +66,37 @@ public class DoubleLinkedList08 {
         System.out.println("Node berhasil disisipkan setelah NIM " + keyNim);
     }
 
+    // public void removeFirst() {
+    //     if (isEmpty()) {
+    //         System.out.println("Linked list kosong, tidak bisa menghapus.");
+    //         return;
+    //     } else if (head == tail) {
+    //         head = tail = null;
+    //     } else {
+    //         head = head.next;
+    //         head.prev = null;
+    //     }
+    // }
+
     public void removeFirst() {
-        if (isEmpty()) {
-            System.out.println("Linked list kosong, tidak bisa menghapus.");
-            return;
-        } else if (head == tail) {
-            head = tail = null;
-        } else {
-            head = head.next;
-            head.prev = null;
-        }
+    if (isEmpty()) {
+        System.out.println("Linked list kosong, tidak bisa menghapus.");
+        return;
     }
+
+    Mahasiswa08 removedData = head.data; 
+
+    if (head == tail) {
+        head = tail = null;
+    } else {
+        head = head.next;
+        head.prev = null;
+    }
+
+    System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah:");
+    removedData.tampil();
+}
+
 
     public void removeLast() {
         if (isEmpty()) {

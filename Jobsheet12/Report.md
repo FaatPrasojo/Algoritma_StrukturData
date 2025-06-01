@@ -93,3 +93,45 @@ case 7 -> {
     list.insertAftrer(keyNim, mhs);
 }
 ```
+## 12.3 Praktikum 2
+
+### 12.3.2 Verifikasi Hasil Percobaan
+
+![img](img/img2.png)
+
+### 12.3.3 Pertanyaan Percobaan
+
+1. Apakah maksud statement berikut pada method `removeFirst()`?
+```
+head = head.next;
+head.prev = null;
+```
+- `head = head.next;` :
+    - Geser `head` ke node berikutnya. Node lama yang tadinya jadi `head` sekarang "dilupakan" (tidak dirujuk lagi), sehingga siap dihapus oleh garbage collector.
+
+- `head.prev = null;` :
+    - Putuskan hubungan balik (pointer `prev`) dari node baru yang menjadi head, agar tidak lagi menunjuk ke node lama (yang dihapus).
+
+2. Modifikasi kode program untuk menampilkan pesan "Data sudah berhasil dihapus. Data yang terhapus adalah.."
+
+```
+public void removeFirst() {
+    if (isEmpty()) {
+        System.out.println("Linked list kosong, tidak bisa menghapus.");
+        return;
+    }
+
+    Mahasiswa08 removedData = head.data; // Simpan data sebelum dihapus
+
+    if (head == tail) {
+        head = tail = null;
+    } else {
+        head = head.next;
+        head.prev = null;
+    }
+
+    System.out.println("Data sudah berhasil dihapus. Data yang terhapus adalah:");
+    removedData.tampil();
+}
+```
+

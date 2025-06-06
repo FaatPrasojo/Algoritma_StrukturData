@@ -1,5 +1,3 @@
-package CaseMethod;
-
 public class Dokter {
 
     String idDokter, namaDokter;

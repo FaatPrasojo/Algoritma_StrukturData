@@ -77,3 +77,11 @@ Kedua baris ini digunakan untuk:
 Tanpa ini, linked list akan menjadi tidak konsisten, berpotensi menyebabkan error atau data rusak.
 
 ## Tugas
+
+![img](img/img3.png)
+
+![img](img/img4.png)
+
+![img](img/img5.png)
+
+![img](img/img6.png)

@@ -1,16 +1,14 @@
-package CaseMethod;
-
 public class Pasien {
 
-    String namaPasien, nik, keluhan;
+    String nama, nik, keluhan;
 
-    public Pasien (String namaPasien,String nik,String keluhan){
-        this.namaPasien=namaPasien;
+    public Pasien (String nama,String nik,String keluhan){
+        this.nama=nama;
         this.nik=nik;
         this.keluhan= keluhan;
     }
-    public void tampilkanInformasi() {
-        System.out.println("Nama Pasien : " + namaPasien);
+    public void tampilkanInformasi(){
+        System.out.println("Nama Pasien : " + nama);
         System.out.println("NIK: " + nik);
         System.out.println("Keluhan : " + keluhan);
     }

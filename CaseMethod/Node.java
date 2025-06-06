@@ -1,5 +1,3 @@
-package CaseMethod;
-
 public class Node {
     TransaksiLayanan data;
     Node next;

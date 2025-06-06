@@ -40,7 +40,6 @@ public class DoubleLinkedList08 {
     public void insertAftrer(String keyNim, Mahasiswa08 data) {
         Node08 current = head;
 
-        // Cari node dengan nim = keyNim
         while (current != null && !current.data.nim.equals(keyNim)) {
             current = current.next;
         }

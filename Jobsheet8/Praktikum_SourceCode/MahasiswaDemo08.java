@@ -1,4 +1,4 @@
-package Jobsheet9.Praktikum_SourceCode;
+package Jobsheet8.Praktikum_SourceCode;
 import java.util.Scanner;
 public class MahasiswaDemo08 {
     public static void main(String[] args) {

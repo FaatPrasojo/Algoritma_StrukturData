@@ -1,4 +1,4 @@
-package Jobsheet11.SourceCode_Tugas;
+package Jobsheet12.SourceCode_Tugas;
 
 public class Queue {
     private Mahasiswa front;

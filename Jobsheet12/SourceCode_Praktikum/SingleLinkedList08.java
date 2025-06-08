@@ -1,4 +1,4 @@
-package Jobsheet11.SourceCode_Praktikum;
+package Jobsheet12.SourceCode_Praktikum;
 
 public class SingleLinkedList08 {
     NodeMahasiswa08 head;

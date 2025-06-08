@@ -1,4 +1,4 @@
-package Jobsheet11.SourceCode_Praktikum;
+package Jobsheet12.SourceCode_Praktikum;
 
 import java.util.Scanner;
 

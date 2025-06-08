@@ -1,4 +1,4 @@
-package Jobsheet10.Praktikum_SourceCode;
+package Jobsheet11.Praktikum_SourceCode;
 
 public class Mahasiswa {
     String nim;

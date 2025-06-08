@@ -135,3 +135,104 @@ public void removeFirst() {
 }
 ```
 
+## Tugas
+
+1. Tambahkan Method `add(index, data)`
+```
+    public void addFirst(Mahasiswa08 data) {
+        Node08 newNode08 = new Node08(data);
+        if (isEmpty()) {
+            head = tail = newNode08;
+        } else {
+            newNode08.next = head;
+            head.prev = newNode08;
+            head = newNode08;
+        }
+    }
+
+    public void addLast(Mahasiswa08 data) {
+        Node08 newNode08 = new Node08(data);
+        if (isEmpty()) {
+            head = tail = newNode08;
+        } else {
+            tail.next = newNode08;
+            newNode08.prev = tail;
+            tail = newNode08;
+        }
+    }
+```
+
+2. Tambahkan Method `removeAfter()`
+```
+    public void removeAfter(String keyNIM) {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa menghapus.");
+            return;
+        }
+
+        Node08 current = head;
+
+        while (current != null && !current.data.nim.equals(keyNIM)) {
+            current = current.next;
+        }
+        if (current == null) {
+            System.out.println("Data dengan NIM " + keyNIM + " tidak ditemukan.");
+            return;
+        }
+        if (current.next == null) {
+            System.out.println("Tidak ada node setelah data dengan NIM " + keyNIM);
+            return;
+        }
+
+        Node08 nodeToRemove = current.next;
+        current.next = nodeToRemove.next;
+
+        if (nodeToRemove.next != null) {
+            nodeToRemove.next.prev = current;
+        } else {
+            tail = current;
+        }
+        System.out.println("Node setelah NIM " + keyNIM + " berhasil dihapus.");
+    }
+```
+
+3. Tambahkan Method `remove()`
+```
+    public void remove(String keyNim) {
+        if (isEmpty()) {
+            System.out.println("List kosong, tidak bisa menghapus.");
+            return;
+        }
+
+        Node08 current = head;
+
+        while (current != null && !current.data.nim.equals(keyNim)) {
+            current = current.next;
+        }
+        if (current == null) {
+            System.out.println("Data dengan NIM " + keyNim + " tidak ditemukan.");
+            return;
+        }
+        if (current == head) {
+            head = head.next;
+            if (head != null) {
+                head.prev = null;
+            } else {
+                tail = null;
+            }
+            System.out.println("Node dengan NIM " + keyNim + " berhasil dihapus (sebagai head).");
+            return;
+        }
+        if (current == tail) {
+            tail = tail.prev;
+            tail.next = null;
+            System.out.println("Node dengan NIM " + keyNim + " berhasil dihapus (sebagai tail).");
+            return;
+        }
+        current.prev.next = current.next;
+        current.next.prev = current.prev;
+        System.out.println("Node dengan NIM " + keyNim + " berhasil dihapus.");
+    }
+```
+
+4. Tambahkan Method `getFirst()`, `getLast()`, `getIndex`

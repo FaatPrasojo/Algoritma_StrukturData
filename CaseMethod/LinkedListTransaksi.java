@@ -30,6 +30,37 @@ public class LinkedListTransaksi {
         return current.data;
     }
 
+    // tugas UAS
+    public TransaksiLayanan[] ambilTransaksiRange(int dari, int sampai) {
+        if (dari < 1 || sampai < dari) {
+            System.out.println("Range tidak valid");
+            return new TransaksiLayanan[0];
+        }
+
+        TransaksiLayanan[] hasil = new TransaksiLayanan[sampai - dari + 1];
+        Node current = head;
+        int index = 1;
+        int i = 0;
+
+        while (current != null && index <= sampai) {
+            if (index >= dari && i < hasil.length) {
+                hasil[i] = current.data;
+                i++;
+            }
+            current = current.next;
+            index++;
+        }
+
+        if (i < hasil.length) {
+            TransaksiLayanan[] hasilFix = new TransaksiLayanan[i];
+            for (int j = 0; j < i; j++) {
+                hasilFix[j] = hasil[j];
+            }
+            return hasilFix;
+        }
+        return hasil;
+    }
+
     public int getSize() {
         return size;
     }
@@ -37,15 +68,16 @@ public class LinkedListTransaksi {
     public boolean isEmpty() {
         return size == 0;
     }
-    
-    public void tampilkaRiwayat(){
+
+    public void tampilkaRiwayat() {
         if (isEmpty()) {
             System.out.println("Belum ada transaksi");
-        
+
         }
         for (int i = 0; i < getSize(); i++) {
             TransaksiLayanan t = get(i);
-            System.out.println((i+1) + ". "+ t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
+            System.out.println((i + 1) + ". " + t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp " + t.biaya);
         }
     }
+
 }

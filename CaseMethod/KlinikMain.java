@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class KlinikMain {
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         QueuePasien antrian = new QueuePasien(10);
         LinkedListTransaksi riwayat = new LinkedListTransaksi();
         Scanner sc = new Scanner(System.in);
@@ -21,6 +21,7 @@ public class KlinikMain {
             System.out.println("3. Layani Pasien");
             System.out.println("4. Cek Sisa Antrian Pasien");
             System.out.println("5. Lihat Riwayat Transaksi");
+            System.out.println("6. Lihat Riwayat Transaksi (dari - sampai)");
             System.out.println("0. Keluar");
             System.out.print("Pilih: ");
             pilihan = sc.nextInt();
@@ -28,10 +29,10 @@ public class KlinikMain {
 
             switch (pilihan) {
                 case 1:
-                if(antrian.isFull()){
-                    System.out.println(">> Antrian penuh! Tidak bisa menambahkan pasien.");
-                    break;
-                }
+                    if (antrian.isFull()) {
+                        System.out.println(">> Antrian penuh! Tidak bisa menambahkan pasien.");
+                        break;
+                    }
                     System.out.print("Masukkan NIK Pasien : ");
                     String nik = sc.nextLine();
                     System.out.print("Nasukkan Nama Pasien : ");
@@ -45,10 +46,10 @@ public class KlinikMain {
                     antrian.tampilkanAntrian();
                     break;
                 case 3:
-                if(antrian.isEmpty()){
-                    System.out.println(">> Antrian kosong!");
-                    break;
-                }
+                    if (antrian.isEmpty()) {
+                        System.out.println(">> Antrian kosong!");
+                        break;
+                    }
                     Pasien pasien = antrian.dequeue();
                     System.out.println("Melayani pasien: " + pasien.nama);
 
@@ -72,6 +73,28 @@ public class KlinikMain {
                 case 5:
                     riwayat.tampilkaRiwayat();
                     break;
+
+                // Hasil UAS
+                case 6:
+                    System.out.print("Masukkan nomor transaksi awal (dari): ");
+                    int dari = sc.nextInt();
+                    System.out.print("Masukkan nomor transaksi akhir (sampai): ");
+                    int sampai = sc.nextInt();
+                    sc.nextLine();
+
+                    TransaksiLayanan[] hasil = riwayat.ambilTransaksiRange(dari, sampai);
+                    if (hasil.length == 0) {
+                        System.out.println("Tidak ada transaksi pada rentang tersebut.");
+                    } else {
+                        System.out.println("Riwayat transaksi dari " + dari + " sampai " + sampai + ":");
+                        for (int i = 0; i < hasil.length; i++) {
+                            TransaksiLayanan t = hasil[i];
+                            System.out.println((dari + i) + ". " + t.pasien.nama + " (" + t.durasiLayanan + " jam): Rp "
+                                    + t.biaya);
+                        }
+                    }
+                    break;
+
                 case 0:
                     System.out.println("Keluar dari sistem.");
                     break;
